@@ -1,33 +1,91 @@
 <!DOCTYPE html>
-<html class="page-form" lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
     <base href="https://htmlacademy-adaptive.github.io/2132761-cat-energy-28/2/">
 </head>
-  <body class="page-form__body">
-    <header class="form-header">
-      <a class="main-header__logo" href="#">
+  <body class="page__body selection">
+    <header class="selection-header">
+      <a class="selection-header__logo" href="index.html">
         <img src="img/logo-pic.svg" width="33px" height="38px" alt="Логотип Кэт энерджи в виде кота">
-      </a>
-      <a class="logo" href="#">
         <img src="img/logo-words.svg" width="101px" height="18px" alt="Логотип Кэт энерджи в виде надписи">
       </a>
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list">
-            <li class="main-nav__item">
-              <a href="#">главная</a>
+      <nav class="selection-nav">
+        <button class="nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        <div class="selection-nav__wrapper">
+          <ul class="selection-nav__list">
+            <li class="selection-nav__item">
+              <a href="index.html">главная</a>
               </li>
-            <li class="main-nav__item">
+            <li class="selection-nav__item">
               <a href="catalog.html">каталог продукции</a>
             </li>
-            <li class="main-nav__item">
-              <a href="form.html">подбор программы</a>
+            <li class="selection-nav__item current">
+              <a href="#">подбор программы</a>
             </li>
           </ul>
         </div>
       </nav>
     </header>
-  </body>
+    <main class="main-selection__container">
+      <h1 class="selection__title">Подбор программы</h1>
+      <p class="selection__discription">Заполните анкету, и мы подберем
+        программу питания для вашего кота</p>
+        <div class="selection-intelligence">
+          <form class="selection-program" action="https://echo.htmlacademy.ru" method="post">
+            <div class="selection-program selection-program__intelligence--cat">
+              <label class="selection-program__intelligence--cat" for="cat-name">ИМЯ:<sup>*</sup>
+              <input class="selection-program__intelligence--cat" type="text" id="cat-name" name="ИМЯ" required>
+            </label>
+            </div>
+            <div class="selection-program selection-program__intelligence--cat">
+              <label class="selection-program__intelligence--cat" for="cat-weidth">Вес (кг):<sup>*</sup>
+              <input class="selection-program__intelligence--cat" type="number" id="cat-weidth" name="Вес (кг):" required>
+            </label>
+            </div>
+            <div class="selection-program selection-program__intelligence--cat">
+              <label class="selection-program__intelligence--cat" for="cat-age">Возраст (лет):
+              <input class="selection-program__intelligence--cat" type="number" id="cat-age" name="Возраст (лет):">
+            </label>
+            </div>
+            <div class="selection-program selection-program__type">
+              <label class="selection-program__type" for="slim">
+                <input class="selection-program__type" type="radio" id="slim" name="type" value="slim">
+                <span class=""></span>
+              </label>
+            </div>
+        </div>
+    <section class="contact">
+      <div class="contact__wrapper">
+        <h2 class="contact__title">приглашаем к сотрудничеству дилеров!</h2>
+        <p class="contact__adress">ул. Большая
+          Конюшенная, д. 19/8
+          Санкт-Петербург</p>
+          <a class="contact__location" href="#"><img src="img/location.png" alt="Карта с местоположением"></a>
+      </div>
+    </section>
+  </main>
+  <footer class="selection-footer">
+    <div class="selection-footer__wrapper">
+      <img class="selection-footer__logo" src="img/logo-words.svg" alt="Логотип Кэт энерджи в виде надписи">
+      <div class="selection-footer__social social">
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">Мы в Ютубе</a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">Мы в Телеграме</a>
+          </li>
+        </ul>
+      </div>
+      <div class="selection-footer__copyright copyright">
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
