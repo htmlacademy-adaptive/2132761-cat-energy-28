@@ -9,8 +9,8 @@
 <body class="page__body selection">
   <header class="main-header">
     <a class="main-header__logo" href="index.html">
-      <img src="img/logo-pic.svg" width="33px" height="38px" alt="Логотип Кэт энерджи в виде кота">
-      <img src="img/logo-words.svg" width="101px" height="18px" alt="Логотип Кэт энерджи в виде надписи">
+      <img src="img/logo-pic.svg"  alt="Логотип Кэт энерджи в виде кота">
+      <img src="img/logo-words.svg"  alt="Логотип Кэт энерджи в виде надписи">
     </a>
     <nav class="nav">
       <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
@@ -66,12 +66,12 @@
           <fieldset class="selection-program__contacts-data contacts-data">
             <legend class="contacts-data__title">Контактные данные
               (владельца кота)</legend>
-                <label class="contacts-data__email" for="email">E-mail:<sup>*</sup>
-                  <input class="contacts-data__input selection__input" type="email" id="email" name="contacts"
+                <label class="contacts-data__email selection__input" for="email">E-mail:<sup>*</sup>
+                  <input class="contacts-data__input" type="email" id="email" name="contacts"
                     placeholder="kuklachev@gmail.com" required>
                 </label>
-                <label class="contacts-data__number" for="phone">Телефон:<sup>*</sup>
-                  <input class="contacts-data__input selection__input" type="tel" id="phone" name="number" placeholder="8 (960) 900-60-90"
+                <label class="contacts-data__number selection__input" for="phone">Телефон:<sup>*</sup>
+                  <input class="contacts-data__input" type="tel" id="phone" name="number" placeholder="8 (960) 900-60-90"
                     required>
                 </label>
           </fieldset>
@@ -81,23 +81,22 @@
           </fieldset>
           <fieldset class="selection-program__additional additional">
             <legend class="additional__title subtitle">Дополнительно</legend>
-                <label for="additional__sweetener selection__input">
-                  <input class="additional__sweetener" type="checkbox" name="sweetener" checked>
+                <label class="selection__input" for="additional__sweetener">
+                  <input class="additional__sweetener" type="checkbox" id="additional__sweetener" name="sweetener" checked>
                   сахарозаменитель
                 </label>
-                <label for="additional__water selection__input">
-                  <input class="additional__water" type="checkbox" name="water">
+                <label class="selection__input" for="additional__water">
+                  <input class="additional__water" type="checkbox" id="additional__water" name="water">
                   питьевая вода
                 </label>
-                <label for="additional__milk selection__input">
-                  <input class="additional__milk" type="checkbox" name="milk">
+                <label class="selection__input" for="additional__milk">
+                  <input class="additional__milk" type="checkbox" id="additional__milk" name="milk">
                   молоко
                 </label>
-                <label for="additional__vitamins selection__input">
-                  <input class="additional__vitamins" type="checkbox" name="vitamins">
+                <label class="selection__input" for="additional__vitamins">
+                  <input class="additional__vitamins" type="checkbox" id="additional__vitamins" name="vitamins">
                   витамины
                 </label>
-          </fieldset>
           <button class="selection-program__button button" type="submit">отправить заявку</button>
         </fieldset>
         <p class="selection_always-fields">
