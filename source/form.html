@@ -3,15 +3,15 @@
 
 <head>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="../source/css/style.css">
+  <link rel="stylesheet" href="css/style.css">
   <title>HTML Academy: Кэт энерджи</title>
 </head>
 
 <body class="page__body selection">
   <header class="main-header">
     <a class="main-header__logo" href="index.html">
-      <img src="img/logo-pic.svg"  alt="Логотип Кэт энерджи в виде кота">
-      <img src="img/logo-words.svg"  alt="Логотип Кэт энерджи в виде надписи">
+      <img src="img/logo-pic.svg" width="33" height="38"  alt="Логотип Кэт энерджи в виде кота">
+      <img src="img/logo-words.svg" width="101" height="18"  alt="Логотип Кэт энерджи в виде надписи">
     </a>
     <nav class="nav">
       <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
@@ -31,7 +31,6 @@
     </nav>
   </header>
   <main class="selection__container selection">
-
     <h1 class="selection__title title">Подбор программы</h1>
     <p class="selection__discription">Заполните анкету, и мы подберем
       программу питания для вашего кота</p>
@@ -39,69 +38,69 @@
       <form class="selection-program" action="https://echo.htmlacademy.ru" method="post">
         <fieldset class="selection-program__data data-cat">
           <legend class="visually-hidden">Данные кота</legend>
-              <label class="data-cat__name selection__input" for="cat-name">ИМЯ:<sup>*</sup>
-                <input class="data-cat__input" type="text" id="cat-name" placeholder="барсик" name="ИМЯ" required>
+              <label class="data-cat__name selection__input">ИМЯ:<sup>*</sup>
+                <input class="data-cat__input" type="text" placeholder="барсик" name="ИМЯ" required>
               </label>
-    <label class="data-cat__weidth selection__input" for="cat-weidth">Вес (кг):<sup>*</sup>
-                <input class="data-cat__input" type="number" id="cat-weidth" placeholder="7" name="Вес (кг):" required>
+    <label class="data-cat__weidth selection__input">Вес (кг):<sup>*</sup>
+                <input class="data-cat__input" type="number" placeholder="7" name="Вес (кг):" required>
               </label>
-              <label class="data-cat__age selection__input" for="cat-age">Возраст (лет):
-                <input class="data-cat__input selection__input" type="number" id="cat-age" placeholder="7" name="Возраст (лет):">
+              <label class="data-cat__age selection__input">Возраст (лет):
+                <input class="data-cat__input selection__input" type="number" placeholder="7" name="Возраст (лет):">
               </label>
         </fieldset>
-        <fieldset class="selection-program">
+        <fieldset class="selection-program__selection">
           <legend class="visually-hidden">Выбор программы</legend>
-              <label class="selection-program__type selection__input" for="slim">
-                <input class="selection-program__type" type="radio" id="slim" name="type" value="slim" checked>
+              <label class="selection-program__type selection__input">
+                <input class="selection-program__type" type="radio" name="type" value="slim" checked>
               похудение
               </label>
-              <label class="selection-program__type selection__input" for="bulk">
-                <input class="selection-program__type" type="radio" id="bulk" name="type" value="bulk">
+              <label class="selection-program__type selection__input">
+                <input class="selection-program__type" type="radio" name="type" value="bulk">
                 Набор массы
               </label>
-              <label class="selection-program__type selection__input" for="advice">
-                <input class="selection-program__type" type="radio" id="advice" name="type" value="advice">
+              <label class="selection-program__type selection__input">
+                <input class="selection-program__type" type="radio" name="type" value="advice">
                 Не знаю (Нужен ваш совет)
               </label>
         </fieldset>
           <fieldset class="selection-program__contacts-data contacts-data">
-            <legend class="contacts-data__title">Контактные данные
+            <legend class="contacts-data__title selection-program__title">Контактные данные
               (владельца кота)</legend>
-                <label class="contacts-data__email selection__input" for="email">E-mail:<sup>*</sup>
-                  <input class="contacts-data__input" type="email" id="email" name="contacts"
+                <label class="contacts-data__email selection__input">E-mail:<sup>*</sup>
+                  <input class="contacts-data__input" type="email" name="contacts"
                     placeholder="kuklachev@gmail.com" required>
                 </label>
-                <label class="contacts-data__number selection__input" for="phone">Телефон:<sup>*</sup>
-                  <input class="contacts-data__input" type="tel" id="phone" name="number" placeholder="8 (960) 900-60-90"
+                <label class="contacts-data__number selection__input">Телефон:<sup>*</sup>
+                  <input class="contacts-data__input" type="tel" name="number" placeholder="8 (960) 900-60-90"
                     required>
                 </label>
           </fieldset>
           <fieldset class="selection-program__comment comment">
-            <legend class="comment__title">Комментарий</legend>
-            <input class="comment__input selection__input" type="text" placeholder="Расскажите обо всех повАдках кота">
+            <legend class="comment__title selection-program__title">Комментарий</legend>
+            <textarea class="comment__field" name="comment__field" placeholder="Расскажите обо всех повАдках кота"></textarea>
           </fieldset>
           <fieldset class="selection-program__additional additional">
-            <legend class="additional__title subtitle">Дополнительно</legend>
-                <label class="selection__input" for="additional__sweetener">
-                  <input class="additional__sweetener" type="checkbox" id="additional__sweetener" name="sweetener" checked>
+            <legend class="additional__title selection-program__title">Дополнительно</legend>
+                <label class="selection__input">
+                  <input class="additional__sweetener" type="checkbox" name="sweetener" checked>
                   сахарозаменитель
                 </label>
-                <label class="selection__input" for="additional__water">
-                  <input class="additional__water" type="checkbox" id="additional__water" name="water">
+                <label class="selection__input">
+                  <input class="additional__water" type="checkbox" name="water">
                   питьевая вода
                 </label>
-                <label class="selection__input" for="additional__milk">
-                  <input class="additional__milk" type="checkbox" id="additional__milk" name="milk">
+                <label class="selection__input">
+                  <input class="additional__milk" type="checkbox" name="milk">
                   молоко
                 </label>
-                <label class="selection__input" for="additional__vitamins">
-                  <input class="additional__vitamins" type="checkbox" id="additional__vitamins" name="vitamins">
+                <label class="selection__input">
+                  <input class="additional__vitamins" type="checkbox" name="vitamins">
                   витамины
                 </label>
-          <button class="selection-program__button button" type="submit">отправить заявку</button>
         </fieldset>
+        <button class="selection-program__button button" type="submit">отправить заявку</button>
         <p class="selection_always-fields">
-          <small>* — Обязательные поля</small>
+          * — Обязательные поля</p>
       </form>
     </div>
       <section class="contact">
@@ -128,11 +127,9 @@
           <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">Мы в Телеграме</a>
         </li>
       </ul>
-      <div class="main-footer__copyright copyright">
         <a class="copyright-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy
-          <img src="img/footer/logo-academy.svg" alt="Логотип html Academy">
+          <img src="img/footer/logo-academy.svg" width="27" height="34" alt="Логотип html Academy">
         </a>
-      </div>
     </div>
   </footer>
 </body>
