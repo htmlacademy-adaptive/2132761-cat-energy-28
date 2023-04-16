@@ -99,6 +99,7 @@ body {
 .main-footer {
   padding: 0 20px 0 20px;
   background-color: #F2F2F2;
+  text-decoration: none;
 }
 .main-footer li {
   list-style-type: none;
