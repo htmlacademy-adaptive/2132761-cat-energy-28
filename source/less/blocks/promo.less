@@ -1,3 +1,37 @@
 .promo {
-  padding: 0;
+  min-height: 477px;
+
+  .promo__wrapper {
+    padding: 0;
+  }
+
+  .promo__title {
+    display: block;
+    text-align: center;
+    line-height: 36px;
+  }
+
+  .promo__slogan {
+    display: block;
+    text-align: center;
+    font-family: "Oswald", "Arial", sans-serif;
+    line-height: 14px;
+  }
+
+  .promo__link {
+    min-width: 280px;
+    padding: 0;
+    margin: 0 20px;
+  }
+
+  .promo__promo-kat {
+    background-color: rgb(0, 255, 76, 0.7);
+    background-size: cover;
+  }
+
+  @media (min-width: @tablet-width) {
+    .promo__promo-kat {
+      display: none;
+    }
+  }
 }

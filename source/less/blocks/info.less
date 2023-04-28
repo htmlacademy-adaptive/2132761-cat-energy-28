@@ -1,0 +1,26 @@
+.info {
+  margin: 0;
+
+  .info__item:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: @tablet-width) {
+    .info__list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 37px 153px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+
+    .info__list {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+}
+

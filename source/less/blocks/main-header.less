@@ -1,7 +1,9 @@
 .main-header {
-  width: 100%;
   min-height: 38px;
   padding: 10px 20px 18px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 
   li {
     list-style-type: none;
@@ -14,5 +16,22 @@
     line-height: 20px;
     color: @black;
     text-decoration: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    .main-nav__toggle {
+      display: none;
+    }
+
+    .main-nav__list {
+      min-width: 440px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 110px;
   }
 }
