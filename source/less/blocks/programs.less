@@ -1,5 +1,5 @@
-.program {
-  background-color: #F2F2F2;
+.programs {
+
   padding: 30px 33px 18px 20px;
 
   a {
@@ -8,9 +8,30 @@
     text-decoration: none;
     color: inherit;
   }
+
+  .programs__type-slim {
+    background-color: #F2F2F2;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .programs__type {
+    background-color: #F2F2F2;
+  }
+
+  @media (min-width: @desktop-width) {
+    .programs__wrapper {
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    .programs__type-slim {
+      width: 45%;
+    }
+
+    .programs__type {
+      width: 45%;
+    }
+  }
 }
 
-.programs__type-slim {
-  margin-top: 20px;
-  margin-bottom: 20px;
-}

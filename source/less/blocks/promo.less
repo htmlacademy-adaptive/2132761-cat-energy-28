@@ -19,9 +19,14 @@
   }
 
   .promo__link {
-    min-width: 280px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 260px;
     padding: 0;
     margin: 0 20px;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
   }
 
   .promo__promo-kat {
@@ -32,6 +37,17 @@
   @media (min-width: @tablet-width) {
     .promo__promo-kat {
       display: none;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    .promo__wrapper {
+      display: flex;
+    }
+
+    .promo__promo-kat {
+      display: block;
+
     }
   }
 }

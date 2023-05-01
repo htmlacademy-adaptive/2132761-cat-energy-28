@@ -1,23 +1,106 @@
-.catalog__wrapper {
-  padding: 0 20px 0 20px;
-}
-
-ul {
-  padding: 0;
-}
-
-li {
-  list-style-type: none;
-}
-
 .catalog-container {
-  .contact {
-    background-color: #F2F2F2;
-  }
-}
 
-.catalog__special {
-  min-width: 280px;
-  min-height: 290px;
-  background-color: @green;
+  ul {
+    padding: 0;
+  }
+
+  li {
+    list-style-type: none;
+  }
+
+  .catalog__product-list {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 14px;
+  }
+
+  .product-item:not(:last-child) {
+    margin-bottom: 19px;
+  }
+
+  .catalog__special {
+    min-width: 280px;
+    min-height: 290px;
+    background-color: @green;
+  }
+
+  .contact__wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    background-color: rgb(242, 242, 242);
+    min-height: 198px;
+    align-items: center;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 0 30px;
+
+
+    .catalog__product-list {
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+    }
+
+    .catalog__additional-products-list {
+      padding: 0 38px;
+      margin-bottom: 69px;
+    }
+
+    .additional-products__button {
+      width: 100%;
+    }
+
+    .catalog__special {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      margin-bottom: 76px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    .catalog__wrapper {
+      padding: 0 110px;
+    }
+
+    .catalog__product-list {
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      gap: 80;
+    }
+
+    .product-item-button {
+      min-width: 72%;
+    }
+
+    .catalog__additional-products {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .catalog__additional-products-title {
+      width: 100%;
+    }
+
+    .additional-products__item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .catalog__additional-products-list {
+      padding: 0;
+      width: 70%;
+    }
+
+    .additional-products__button {
+      width: 15%;
+    }
+
+    .catalog__special {
+      flex-direction: column;
+    }
+  }
 }

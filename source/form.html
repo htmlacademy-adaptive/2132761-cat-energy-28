@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/style.css">
   <title>HTML Academy: Кэт энерджи</title>
 </head>
@@ -32,7 +33,7 @@
   </header>
   <main class="selection__container selection">
     <h1 class="selection__title title">Подбор программы</h1>
-    <p class="selection__discription">Заполните анкету, и мы подберем
+    <p class="selection__discription">Заполните анкету, и мы подберем <br>
       программу питания для вашего кота</p>
     <div class="selection__data-wrapper wrapper">
       <form class="selection-program" action="https://echo.htmlacademy.ru" method="post">
@@ -97,19 +98,22 @@
             витамины
           </label>
         </fieldset>
+        <div class="selection-button">
         <button class="selection-program__button button" type="submit">отправить заявку</button>
-        <p class="selection_always-fields">
-          * — Обязательные поля</p>
+        <span class="selection_always-fields">
+          * — Обязательные поля</span>
+        </div>
       </form>
     </div>
     <section class="contact">
-      <div class="contact__wrapper wrapper-big">
-        <h2 class="contact__title">приглашаем к сотрудничеству дилеров!</h2>
-        <p class="contact__adress">ул. Большая
-          Конюшенная, д. 19/8
+      <div class="contact__wrapper contact-info">
+        <h2 class="contact__title">приглашаем <br> к сотрудничеству <br> дилеров!</h2>
+        <p class="contact__adress">ул. Большая<br>
+          Конюшенная, д. 19/8 <br>
           Санкт-Петербург</p>
+        </div>
         <a class="contact__location" href="#"><img src="img/location.png" width="100%" alt="Карта с местоположением"></a>
-      </div>
+
     </section>
   </main>
   <footer class="main-footer">
