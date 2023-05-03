@@ -92,6 +92,15 @@ body {
   color: #000000;
   text-decoration: none;
 }
+.main-header .main-header-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-header .main-nav__list {
+  display: none;
+}
 @media (min-width: 769px) {
   .main-header .main-nav__toggle {
     display: none;
@@ -127,6 +136,9 @@ body {
 }
 .promo {
   min-height: 477px;
+  background-image: url(../../img/promo/green-cat.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 .promo .promo__wrapper {
   padding: 0;
@@ -152,35 +164,67 @@ body {
   align-items: center;
   justify-content: center;
 }
-.promo .promo__promo-kat {
-  background-color: #00ff4c;
-  background-size: cover;
-}
 @media (min-width: 769px) {
-  .promo .promo__promo-kat {
-    display: none;
+  .promo {
+    background: none;
   }
-}
-@media (min-width: 1440px) {
   .promo .promo__wrapper {
-    background: linear-gradient(90deg, transparent 50%, #68b738 50%);
-    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+  }
+  .promo .promo__title {
+    text-align: start;
+    padding-left: 118px;
+    margin-bottom: 41px;
+  }
+  .promo .promo__slogan {
+    text-align: start;
+    padding-left: 120px;
+    min-width: 283px;
+    margin-bottom: 20px;
+    margin-top: 0;
   }
   .promo .promo-product {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .promo .promo__link {
+    position: absolute;
+    left: 10%;
+    top: 30%;
+    margin: 0;
+  }
+}
+@media (min-width: 769px) and (min-width: 1440px) {
+  .promo {
+    background-image: url(../../img/promo/green-cat.jpg);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: 100%;
+  }
+  .promo__wrapper {
+    padding-top: 100px;
+  }
+  .promo-product {
     display: block;
     margin-left: 45%;
   }
-  .promo .promo__title {
+  .promo__title {
     margin-right: 50%;
     font-size: 60px;
     line-height: 60px;
   }
-  .promo .promo__slogan {
+  .promo__slogan {
     margin-right: 58%;
     font-size: 20px;
     line-height: 20px;
     color: #000000;
     text-transform: uppercase;
+  }
+  .promo__link {
+    position: absolute;
+    left: 8%;
+    top: 42%;
   }
 }
 .programs {
@@ -295,15 +339,25 @@ body {
   display: block;
   text-align: center;
 }
+.history .history__cat-slider {
+  display: flex;
+  justify-content: center;
+}
 @media (min-width: 769px) {
   .history .history__wrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
   }
-  .history .cat-slider {
-    margin-left: auto;
-    margin-right: auto;
+  .history .history__cat-slider {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}
+@media (min-width: 1440px) {
+  .history .history__cat-slider {
+    width: 50%;
   }
 }
 .main-footer {
@@ -413,7 +467,7 @@ body {
   .catalog-container .catalog__product-list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 80;
+    gap: 80px;
   }
   .catalog-container .product-item-button {
     min-width: 72%;
@@ -442,72 +496,86 @@ body {
     flex-direction: column;
   }
 }
-.selection__data-wrapper {
-  padding: 0 20px 0 20px;
+.selection-container .selection-wrapper {
   display: flex;
   flex-direction: column;
 }
-.selection__data-wrapper .selection .contact {
-  background-color: #f2f2f2;
+.selection-container .data-cat {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  justify-content: space-between;
+  margin-bottom: 46px;
+  border: none;
 }
-.selection__data-wrapper .data-cat {
+.selection-container .data-cat__input {
+  padding: 0;
+}
+.selection-container .selection-program__selection {
+  display: flex;
+  flex-direction: column;
+  border: none;
+  margin-bottom: 45px;
+}
+.selection-container .contacts-data {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 24px;
+}
+.selection-container .comment {
+  margin-bottom: 23px;
+}
+.selection-container .additional {
   display: flex;
   flex-direction: column;
 }
-.selection__data-wrapper .selection-program__selection {
-  display: flex;
-  flex-direction: column;
-}
-.selection__data-wrapper .contacts-data {
-  display: flex;
-  flex-direction: column;
-}
-.selection__data-wrapper .additional {
-  display: flex;
-  flex-direction: column;
-}
-.selection__data-wrapper .selection__input {
+.selection-container .selection__input {
   font-family: "Oswald", "Arial", sans-serif;
   color: #444444;
   text-transform: uppercase;
 }
-.selection__data-wrapper .selection-program__button {
+.selection-container .selection-program__button {
   width: 100%;
 }
 @media (min-width: 769px) {
-  .selection__data-wrapper .selection-program__button {
+  .selection-container .selection-program__button {
     width: 40%;
     margin-right: 64px;
   }
+  .selection-container .additional {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 @media (min-width: 1440px) {
-  .selection__data-wrapper .selection-program {
+  .selection-container .selection-program {
     display: flex;
     flex-wrap: wrap;
   }
-  .selection__data-wrapper .data-cat {
+  .selection-container .data-cat {
     width: 45%;
     margin-right: 80px;
   }
-  .selection__data-wrapper .selection-program__selection {
+  .selection-container .selection-program__selection {
     width: 45%;
   }
-  .selection__data-wrapper .contacts-data {
+  .selection-container .contacts-data {
     width: 100%;
     flex-direction: row;
     justify-content: space-between;
   }
-  .selection__data-wrapper .contacts-data .contacts-data__input {
+  .selection-container .contacts-data__input {
     width: 475px;
   }
-  .selection__data-wrapper .comment {
+  .selection-container .comment {
     width: 100%;
   }
-  .selection__data-wrapper .comment .comment__field {
+  .selection-container .comment__field {
     width: 100%;
   }
-  .selection__data-wrapper .additional {
+  .selection-container .additional {
     width: 100%;
+    display: flex;
     flex-direction: row;
     justify-content: space-around;
   }
@@ -518,6 +586,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 26px 20px;
+  background-color: #f2f2f2;
 }
 .contact .contact__title {
   font-size: 16px;
