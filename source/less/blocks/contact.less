@@ -1,0 +1,35 @@
+.contact {
+  .contact-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 26px 20px;
+    background-color: rgb(242, 242, 242);
+  }
+
+  .contact__title {
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  .contact__adress {
+    line-height: 20px;
+    margin: 0;
+  }
+
+  @media (min-width: @tablet-width) {
+    .contact__title {
+      font-size: 20px;
+      line-height: 26px;
+      padding-left: 50px;
+    }
+
+    .contact__adress {
+      font-size: 16px;
+      padding-right: 50px;
+    }
+  }
+}
