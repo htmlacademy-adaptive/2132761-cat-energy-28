@@ -46,6 +46,10 @@
     background-position: center;
   }
 
+  .programs__icon-bulk img {
+    margin: 13px -7px;
+  }
+
   .programs__icon {
     background-image: url(../img/arrow.svg);
     background-repeat: no-repeat;
@@ -71,7 +75,7 @@
       grid-template-rows: 25% 50% 25%;
     }
 
-    .program__subtitle{
+    .program__subtitle {
       font-size: 36px;
       line-height: 36px;
     }
@@ -113,7 +117,6 @@
     }
 
     .programs__icon {
-      grid-column: 1/2;
       display: flex;
       justify-content: flex-start;
       align-items: center;
@@ -123,47 +126,61 @@
 
   @media (min-width: @desktop-width) {
     .programs__wrapper {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 110px;
-  }
+      display: flex;
+      justify-content: space-between;
+      padding: 0 110px;
+    }
 
-  .program {
-    width: 42%;
-    display: grid;
-    grid-template-columns: 50% 50%;
-  }
+    .program {
+      width: 42%;
+      display: grid;
+      grid-template-columns: 50% 50%;
+    }
 
-  .programs__type-slim {
-    display: flex;
-    margin: 0;
-  }
+    .programs__type-slim {
+      display: flex;
+      margin: 0;
+    }
 
-  .programs__icon-slim {
-    width: 100px;
-    height: 100px;
-  }
+    .programs__icon-slim {
+      width: 100px;
+      height: 100px;
+    }
 
-  .programs__icon-slim img {
-    width: 70px;
-    height: 97px;
+    .programs__icon-slim img {
+      width: 70px;
+      height: 97px;
+      margin: -5px 20px;
+    }
 
-  }
+    .program__discription {
+      width: 100%;
+    }
 
-  .program__discription {
-    width: 100%;
-  }
+    .programs__type-bulk {
+      display: flex;
+    }
 
-  .programs__type-bulk {
-    display: flex;
-  }
+    .programs__icon-bulk {
+      display: flex;
+      width: 100px;
+      height: 100px;
+      margin: 0;
+    }
 
-  .programs__icon-bulk {
-    display: flex;
-    width: 100px;
-    height: 100px;
-    margin: 0;
+    .programs__icon-bulk img {
+      width: 134px;
+      height: 56px;
+      margin: 25px -15px;
+    }
+
+    .program__subtitle {
+      margin-left: 62px;
+    }
+
+    .programs__icon {
+      min-width: 162px;
+    }
   }
 }
-
 
