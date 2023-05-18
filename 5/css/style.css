@@ -92,6 +92,7 @@ body {
   line-height: 20px;
   color: #000000;
   text-decoration: none;
+  text-transform: uppercase;
 }
 .main-header-wrapper {
   width: 100%;
@@ -113,6 +114,7 @@ body {
   width: 30px;
   cursor: pointer;
   border: none;
+  background-color: #ffffff;
 }
 .main-nav--closed .main-nav__toggle::before {
   content: "";
@@ -132,6 +134,7 @@ body {
   width: 100%;
   padding-left: 0;
   margin: 0;
+  text-align: center;
 }
 .site-list__item::before {
   content: "";
@@ -188,6 +191,12 @@ body {
     background-image: url(../../img/logo-tablet.svg);
     background-repeat: no-repeat;
   }
+  .main-header__logo:hover {
+    opacity: 0.8;
+  }
+  .main-header__logo:active {
+    opacity: 0.6;
+  }
   .main-header-index {
     padding-left: 31px;
     padding-right: 30px;
@@ -240,8 +249,11 @@ body {
     display: flex;
     align-items: center;
   }
+  .main-header-index .site-list {
+    background-color: transparent;
+  }
 }
-.site-list a {
+.main-header-index .site-list a {
   position: relative;
   display: block;
   padding: 22px;
@@ -336,7 +348,7 @@ body {
     line-height: 30px;
   }
   .promo {
-    background-image: url(../img/promo/green-cat.jpg);
+    background-image: url(../../img/green-cat-desktop.jpg);
     background-size: auto 100%;
     background-repeat: no-repeat;
     background-position: 100%;
@@ -519,8 +531,8 @@ body {
   }
   .programs .programs__icon-bulk img {
     width: 134px;
-    height: 56px;
-    margin: 25px -15px;
+    height: 100px;
+    margin: 3px -15px;
   }
   .programs .program__subtitle {
     margin-left: 62px;
@@ -747,7 +759,11 @@ body {
     width: 50%;
   }
   .history .history__stats-discription {
-    top: 35px;
+    top: 55px;
+  }
+  .history .history__stats-item {
+    min-width: 162px;
+    height: 17%;
   }
 }
 .main-footer {
