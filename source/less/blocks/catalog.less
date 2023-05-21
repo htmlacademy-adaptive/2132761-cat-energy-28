@@ -8,14 +8,82 @@
     list-style-type: none;
   }
 
+  .catalog__title {
+    margin-top: 27px;
+    margin-bottom: 49px;
+  }
+
+  .catalog__wrapper::before {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background: rgb(217, 217, 217);
+    position: absolute;
+    top: 170px;
+    left: 0;
+  }
+
+  .catalog__wrapper::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background: rgb(217, 217, 217);
+    position: absolute;
+    top: 66px;
+    left: 0;
+  }
+
   .catalog__product-list {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+
     padding-bottom: 14px;
+  }
+
+  .product-item {
+    font-size: 12px;
+    line-height: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .product-item img {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  .product-item__discription {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .product-item__all {
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+
+  .product-item__subtitle {
+    font-size: 16px;
+    line-height: 20px;
+    color: rgb(17, 17, 17);
+    padding-left: 39px;
   }
 
   .product-item:not(:last-child) {
     margin-bottom: 19px;
+  }
+
+  .additional-products {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .product-item__type {
+    display: flex;
+    justify-content: space-between;
   }
 
   .catalog__special {
@@ -25,6 +93,18 @@
     background-repeat: no-repeat;
     background-size: 100%;
     padding-bottom: 43px;
+  }
+
+  .catalog__special img {
+    margin-left: 101px;
+    margin-top: 59px;
+  }
+
+  .special__discription {
+    font-size: 16px;
+    line-height: 20px;
+    color: rgb(255, 255, 255);
+    text-align: center;
   }
 
   .contact__wrapper {
@@ -37,17 +117,70 @@
   }
 
   @media (min-width: @tablet-width) {
-    padding: 0 30px;
+    .catalog__wrapper {
+      padding: 0 30px;
+    }
 
+    .catalog__wrapper::before {
+      display: none;
+    }
 
+    .catalog__wrapper::after {
+      display: none;
+    }
+
+    .catalog__title {
+      margin-top: 65px;
+      margin-bottom: 82px;
+      font-size: 60px;
+      line-height: 60px;
+    }
     .catalog__product-list {
       display: grid;
       grid-template-columns: repeat(2,1fr);
+      gap: 60px;
+      margin-top: 0;
+    }
+
+    .product-item {
+      flex-direction: column;
+      background: linear-gradient(to bottom, rgb(255, 255, 255) 20%, rgb(242, 242, 242) 80%);
+      padding-bottom: 39px;
+    }
+
+    .product-item img {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .product-item__title {
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    .product-item__discription {
+      width: 100%;
+      padding-left: 36px;
+      padding-right: 36px;
+      box-sizing: border-box;
+      font-size: 16px;
+      line-height: 16px;
     }
 
     .catalog__additional-products-list {
       padding: 0 38px;
       margin-bottom: 69px;
+    }
+
+    .additional-products__item {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .additional-products__quantity {
+      margin-right: 49px;
     }
 
     .additional-products__button {
@@ -59,6 +192,19 @@
       align-items: center;
       justify-content: space-around;
       margin-bottom: 76px;
+    }
+
+    .special__discription {
+      text-align: start;
+    }
+
+    .contact__wrapper {
+      padding: 56px 70px 55px;
+      box-sizing: border-box;
+
+      .contact__title {
+        margin-right: 210px;
+      }
     }
   }
 
@@ -104,6 +250,29 @@
 
     .catalog__special {
       flex-direction: column;
+    }
+
+    .catalog__special img {
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 56px;
+    }
+
+    .special__discription {
+      margin-bottom: 42px;
+      margin-top: 0;
+    }
+
+    .special__discription {
+      text-align: center;
+    }
+
+    .additional-products {
+      display: flex;
+    }
+
+    .additional-products__title {
+      min-width: 200px;
     }
   }
 }
