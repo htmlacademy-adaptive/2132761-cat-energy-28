@@ -1,36 +1,201 @@
 .programs {
+  margin-bottom: 20px;
 
-  padding: 30px 33px 18px 20px;
+  .program {
+    padding: 21px 33px 18px 22px;
+  }
 
-  a {
-    font-family: "Oswald", "Arial", sans-serif;
-    font-weight: 400;
-    text-decoration: none;
-    color: inherit;
+  .program__subtitle {
+    display: flex;
+    align-items: center;
+    margin: 0;
   }
 
   .programs__type-slim {
-    background-color: #F2F2F2;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(242, 242, 242);
     margin-top: 20px;
     margin-bottom: 20px;
   }
 
-  .programs__type {
-    background-color: #F2F2F2;
+  .programs__type-bulk {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(242, 242, 242);
+  }
+
+  .programs__icon-slim {
+    width: 50px;
+    height: 50px;
+    background-color: @green;
+    border-radius: 50%;
+    margin-right: 19px;
+    /*background-image: url(../img/cat-slim.svg);*/
+    background-repeat: no-repeat;
+  }
+
+  .programs__icon-bulk {
+    width: 50px;
+    height: 50px;
+    background-color: @green;
+    border-radius: 50%;
+    margin-right: 20px;
+    /*background-image: url(../img/cat-pro.svg);*/
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .programs__icon-bulk img {
+    margin: 13px -7px;
+  }
+
+  .programs__icon {
+    background-image: url(../img/arrow.svg);
+    background-repeat: no-repeat;
+    padding-right: 40px;
+    text-transform: uppercase;
+    font-family: "Oswald", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    text-decoration: none;
+    color: @black;
+    background-position: right center;
+  }
+
+  @media (min-width: @tablet-width) {
+    .wrapper {
+      padding-left: 31px;
+      padding-right: 30px;
+    }
+
+    .program {
+      display: grid;
+      grid-template-columns: 60% 40%;
+      grid-template-rows: 25% 50% 25%;
+      padding: 81px 62px 53px 52px;
+    }
+
+    .programs__type-slim {
+      margin-top: 0;
+      margin-bottom: 30px;
+    }
+
+    .program__subtitle {
+      font-size: 36px;
+      line-height: 36px;
+      margin-bottom: 34px;
+    }
+
+    .programs__icon-slim {
+      grid-column: 2/3;
+      grid-row: 1/4;
+      width: 200px;
+      height: 200px;
+      justify-self: end;
+      margin: 0;
+    }
+
+    .programs__icon-slim img {
+      width: 140px;
+      height: 194px;
+      margin: -10px 30px;
+    }
+
+    .programs__icon-bulk {
+      grid-column: 2/3;
+      grid-row: 1/4;
+      width: 200px;
+      height: 200px;
+      justify-self: end;
+      margin: 0;
+    }
+
+    .programs__icon-bulk img {
+      width: 268px;
+      height: 112px;
+      margin: 50px -35px;
+    }
+
+    .program__discription {
+      grid-column: 1/2;
+      font-size: 16px;
+      line-height: 24px;
+      color: @black;
+      width: 340px;
+      margin: 0;
+    }
+
+    .programs__icon {
+      display: flex;
+      align-items: end;
+      background-position: bottom center;
+    }
   }
 
   @media (min-width: @desktop-width) {
     .programs__wrapper {
       display: flex;
       justify-content: space-between;
-    }
-    
-    .programs__type-slim {
-      width: 45%;
+      padding: 0 110px;
+      gap: 80px;
     }
 
-    .programs__type {
-      width: 45%;
+    .program {
+      width: 42%;
+      display: flex;
+      margin: 0;
+      padding-top: 41px;
+      padding-bottom: 55px;
+    }
+
+    .programs__type-slim {
+      display: flex;
+      margin: 0;
+    }
+
+    .programs__icon-slim {
+      width: 100px;
+      height: 100px;
+      margin-bottom: 39px;
+    }
+
+    .programs__icon-slim img {
+      width: 70px;
+      height: 97px;
+      margin: -5px 20px;
+    }
+
+    .program__discription {
+      width: 100%;
+      margin-bottom: 23px;
+    }
+
+    .programs__type-bulk {
+      display: flex;
+    }
+
+    .programs__icon-bulk {
+      display: flex;
+      width: 100px;
+      height: 100px;
+      margin: 0 0 39px;
+    }
+
+    .programs__icon-bulk img {
+      width: 134px;
+      height: 100px;
+      margin: 3px -15px;
+    }
+
+    .program__subtitle {
+      margin-left: 62px;
+    }
+
+    .programs__icon {
+      background-position: right center;
+      align-items: center;
     }
   }
 }

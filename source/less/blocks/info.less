@@ -1,19 +1,112 @@
 .info {
   margin: 0;
 
+  .info__title {
+    margin-top: 0;
+    margin-bottom: 40px;
+  }
+
+  .info__list {
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 49px;
+  }
+
   .info__item {
     list-style-type: none;
+    display: flex;
+    padding-left: 80px;
+    position: relative;
+    min-height: 60px;
+  }
+
+  .info__item::before {
+    content: "";
+    width: 60px;
+    height: 60px;
+    background-color: @green;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .info__item:nth-of-type(1)::before {
+    background-image: url(../img/special/icon-leaf.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .info__item:nth-of-type(2)::before {
+    background-image: url(../img/special/icon-water.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .info__item:nth-of-type(3)::before {
+    background-image: url(../img/special/icon-eat.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .info__item:nth-of-type(4)::before {
+    background-image: url(../img/special/icon-clock.svg);
+    background-repeat: no-repeat;
+    background-position: center;
   }
 
   .info__item:not(:last-child) {
     margin-bottom: 20px;
   }
 
+  .info__item-number {
+    display: none;
+  }
+
   @media (min-width: @tablet-width) {
+    .info__wrapper {
+      padding: 0 109px 0 31px;
+    }
+
     .info__list {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 37px 153px;
+    }
+
+    .info__title {
+      font-size: 60px;
+      line-height: 60px;
+      margin-bottom: 32px;
+    }
+
+    .info__item {
+      display: flex;
+      align-items: start;
+      padding-left: 0;
+      font-size: 16px;
+      line-height: 24px;
+      min-height: 280px;
+      padding-top: 150px;
+      box-sizing: border-box;
+    }
+
+    .info__item::before {
+      width: 80px;
+      height: 80px;
+      top: 40px;
+    }
+
+    .info__item-number {
+      display: block;
+      font-family: "Oswald", "Arial", sans-serif;
+      font-size: 280px;
+      line-height: 280px;
+      color: rgb(242, 242, 242);
+      position: absolute;
+      top: 0;
+      right: 15px;
+      z-index: -1;
     }
   }
 
@@ -24,6 +117,14 @@
       display: flex;
       flex-direction: row;
       justify-content: space-between;
+    }
+
+    .info__item {
+      min-width: 230px;
+    }
+
+    .info__item-number {
+      right: 5px;
     }
   }
 }

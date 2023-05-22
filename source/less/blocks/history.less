@@ -12,49 +12,48 @@
     margin-bottom: 40px;
   }
 
+  .history__discription {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
   .history__stats {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
   }
 
-  .history__stats-weight {
+
+
+  .history__stats-item {
     border: 2px solid #dad6d6;
     margin-right: 32px;
-    min-width: 124px;
     text-align: center;
+    padding: 14px 10px 0;
   }
 
-  .history__stats-weight-position {
+  .stats-item-time {
+    margin: 0;
+  }
+
+  .history__stats-position {
     font-family: "Oswald", "Arial", sans-serif;
     font-size: 24px;
     line-height: 24px;
     display: block;
     color: #000000;
+    margin-bottom: -10px;
   }
 
-  .history__stats-weight-discription {
+  .history__stats-discription {
     font-size: 12px;
     line-height: 12px;
-  }
-
-  .history__stats-time-position {
-    font-family: "Oswald", "Arial", sans-serif;
-    font-size: 24px;
-    line-height: 24px;
-    display: block;
-    color: #000000;
-  }
-
-  .history__stats-time {
-    border: 2px solid #dad6d6;
-    min-width: 124px;
-    text-align: center;
-  }
-
-  .history__stats-time-discription {
-    font-size: 12px;
-    line-height: 12px;
+    position: relative;
+    top: 20px;
+    background-color: rgb(234, 234, 234);
+    padding-left: 20px;
+    padding-right: 20px;
+    display: inline-block;
   }
 
   .history__prise {
@@ -63,6 +62,7 @@
     color: #000000;
     display: block;
     text-align: center;
+    margin-top: 34px;
   }
 
   .history__cat-slider {
@@ -71,22 +71,137 @@
   }
 
   @media (min-width: @tablet-width) {
+    background: linear-gradient(to bottom, rgb(255, 255, 255) 70%, rgb(234, 234, 234) 30%);
+
     .history__wrapper {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
+      padding-left: 31px;
+      padding-right: 30px;
+      position: relative;
+    }
+
+    .history__wrapper::before {
+      content: "";
+      width: 100%;
+      height: 1px;
+      background: rgb(230, 230, 230);
+      position: absolute;
+      top: 0;
+      left: 0;
+
+    }
+
+    .history__stats {
+      justify-content: flex-start;
+    }
+
+    .history__discription {
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 54px;
+      margin-top: 0;
+    }
+
+    .history__title {
+      font-size: 60px;
+      line-height: 60px;
+      margin-top: 43px;
+      margin-bottom: 63px;
+      padding: 0;
+    }
+
+    .history__stats-item {
+      min-width: 162px;
+      padding: 15px 0 20px;
+      margin-right: 42px;
+    }
+
+    .stats-item-time {
+      margin-right: 160px;
+    }
+
+    .history__stats-weight {
+      min-width: 162px;
+    }
+
+    .history__stats-discription {
+      font-size: 14px;
+      line-height: 14px;
+      top: 29px;
+      background-color: rgb(255, 255, 255);
+      br {
+        display: none;
+      }
+    }
+
+    .time {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    .history__stats-weight-position {
+      font-size: 30px;
+      line-height: 37px;
+    }
+
+    .history__stats-weight-discription {
+      font-size: 14px;
+      line-height: 14px;
+    }
+
+
+
+    .history__stats-time-position {
+      font-size: 30px;
+      line-height: 37px;
+    }
+
+    .history__stats-time-discription {
+      font-size: 14px;
+      line-height: 14px;
     }
 
     .history__cat-slider {
       width: 100%;
       display: flex;
       justify-content: center;
+      margin-top: 99px;
+      padding-bottom: 100px;
+    }
+
+    .history__prise {
+      width: 174px;
+      font-size: 20px;
+      display: block;
+      margin-top: 10px;
+      text-align: end;
     }
   }
 
   @media (min-width: @desktop-width) {
+    .history__wrapper {
+      padding-left: 110px;
+    }
     .history__cat-slider {
       width: 50%;
+    }
+
+    .history__stats-discription {
+      top: 15px;
+    }
+
+    .history__stats-item {
+      min-width: 162px;
+      height: 17%;
+    }
+
+    .history__stats-position {
+      font-size: 30px;
+      line-height: 37px;
+      
+      box-sizing: border-box;
     }
   }
 }

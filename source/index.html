@@ -11,25 +11,25 @@
 <body class="page__body">
   <header class="main-header main-header-index">
     <div class="main-header-wrapper wrapper">
-    <img src="img/logo-pic.svg" width="33" height="38" alt="Логотип Кэт энерджи в виде кота">
-    <a class="main-header__logo" href="index.html">
-      <img src="img/logo-words.svg" width="101" height="18" alt="Логотип Кэт энерджи в виде надписи">
+      <img src="img/logo-pic.svg" width="33" height="38" alt="#">
+        <a class="main-header__logo" href="index.html">
+<img src="img/logo-words.svg" width="101" height="18" alt="Буквенный логотип Cat Energy">
     </a>
-    <nav class="main-nav">
-      <div class="main-nav__wrapper">
+    <nav class="main-nav main-nav--closed">
+      <!--<div class="main-nav__wrapper">-->
         <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-        <ul class="main-nav__list">
-          <li class="main-nav__item current">
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item current">
             <a href="index.html">главная</a>
           </li>
-          <li class="main-nav__item">
+          <li class="site-list__item">
             <a href="catalog.html">каталог продукции</a>
           </li>
-          <li class="main-nav__item">
+          <li class="site-list__item">
             <a href="form.html">подбор программы</a>
           </li>
         </ul>
-      </div>
+     <!--</div>-->
     </nav>
   </div>
   </header>
@@ -49,18 +49,21 @@
     <section class="programs">
       <div class="programs__wrapper wrapper">
         <div class="programs__type-slim program">
+          <div class="programs__icon-slim">
           <img src="img/cat-slim.svg" width="36" height="50" alt="Сидящий кот">
+        </div>
           <h3 class="program__subtitle subtitle">похудение</h3>
           <p class="program__discription">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям?
             Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-          <a href="catalog.html">каталог slim</a>
+          <a class="programs__icon" href="catalog.html">каталог slim</a>
         </div>
-        <div class="programs__type program">
-          <img src="img/cat-pro.svg" width="67" height="28" alt="Крадущийся кот">
+        <div class="programs__type-bulk program">
+          <div class="programs__icon-bulk">
+          <img src="img/cat-pro.svg" width="67" height="28" alt="Крадущийся кот">        </div>
           <h3 class="program__subtitle subtitle">Набор массы</h3>
           <p class="program__discription">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro
             поможет вашему коту нарастить необходимые мышцы!</p>
-          <a href="catalog.html">каталог pro</a>
+          <a class="programs__icon" href="catalog.html">каталог pro</a>
         </div>
       </div>
     </section>
@@ -72,20 +75,23 @@
             Функциональное питание
             содержит только полезные
             питательные вещества.
-
+<span class="info__item-number">1</span>
           </li>
           <li class="info__item">
             Выпускается в виде порошка,
             который нужно лишь залить
             кипятком и готово.
+            <span class="info__item-number">2</span>
           </li>
           <li class="info__item">
             Замените один-два приема
             обычной еды на наше
             функциональное питание.
+            <span class="info__item-number">3</span>
           </li>
           <li class="info__item">
             Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!
+            <span class="info__item-number">4</span>
           </li>
         </ul>
       </div>
@@ -93,33 +99,43 @@
     <section class="history">
       <div class="history__wrapper wrapper">
         <h2 class="history__title title">Живой пример</h2>
-        <p class="history__discription">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy
+
+        <div class="history__stats">
+          <p class="history__discription">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy
           Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по
           16 часов в день. </p>
-        <div class="history__stats">
-          <div class="history__stats-weight">
-            <span class="history__stats-weight-position">5 КГ</span>
-            <span class="history__stats-weight-discription">снижение <br> веса</span>
+          <div class="history__stats-item">
+            <span class="history__stats-position">5 КГ</span>
+            <span class="history__stats-discription">снижение <br> веса</span>
           </div>
-          <div class="history__stats-time">
-            <span class="history__stats-time-position">60 ДНЕЙ</span>
-            <span class="history__stats-time-discription">затрачено <br> времени</span>
+          <div class="history__stats-item stats-item-time">
+            <span class="history__stats-position">60 ДНЕЙ</span>
+            <span class="history__stats-discription time">затрачено <br> времени</span>
+
           </div>
+          <p class="history__prise">Затраты на питание: 15 000 РУБ. </p>
         </div>
-        <p class="history__prise">Затраты на питание: 15 000 РУБ. </p>
+
         <div class="history__cat-slider">
           <img class="cat-slider" src="img/cat-slider-mobile.png" alt="Слайдер с котом">
         </div>
       </div>
     </section>
     <section class="contact">
-      <div class="contact-info">
+<div class="contact-info">
         <h2 class="contact__title subtitle">приглашаем <br> к сотрудничеству <br> дилеров!</h2>
-        <p class="contact__adress">ул. Большая <br>
+        <p class="contact__adress"> ул. Большая <br>
           Конюшенная, д. 19/8 <br>
-          Санкт-Петербург</p>
+          Санкт-Петербург
+        </p>
       </div>
-      <a class="contact__location" href="#"><img src="img/location.png" width="100%" alt="Карта с местоположением"></a>
+        <a href="#"><img src="img/location.png" width="100%"  alt="Карта с местоположением"></a>
+
+
+
+
+
+
     </section>
   </main>
   <footer class="main-footer">
